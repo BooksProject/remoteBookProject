@@ -26,6 +26,9 @@ public class User {
     @Column(nullable = false,length = 60)
     private String password;
     @OneToMany(cascade = CascadeType.ALL,orphanRemoval = true,fetch = FetchType.EAGER)
-    private List<Book> book;
+    private List<Book> books;
+    @Column(nullable = false)
+    private int userId;
+
 
 }
